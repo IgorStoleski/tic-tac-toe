@@ -120,8 +120,8 @@ function checkWinCondition() {
 function drawLine(combination) {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
-  const cellSize = 70;
-  const padding = 35;
+  const cellSize = 100;
+  const padding = 5;
   const [a, b, c] = combination;
 
   const startX = padding + (a % 3) * cellSize + cellSize / 2;
@@ -131,8 +131,8 @@ function drawLine(combination) {
 
   const lineLength = cellSize * Math.sqrt(2); // Diagonale Länge der Zelle
 
-  const dx = ((endX - startX) / lineLength) * 30; // Verlängerung um 30 Pixel
-  const dy = ((endY - startY) / lineLength) * 30; // Verlängerung um 30 Pixel
+  const dx = ((endX - startX) / lineLength) * 50; // Verlängerung um 30 Pixel
+  const dy = ((endY - startY) / lineLength) * 40; // Verlängerung um 30 Pixel
 
   ctx.strokeStyle = "white";
   ctx.lineWidth = 5;
